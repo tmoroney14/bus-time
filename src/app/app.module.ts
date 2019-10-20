@@ -11,10 +11,11 @@ import {MatProgressSpinnerModule,
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { BusStopComponent } from './bus-stop/bus-stop.component';
+import { StopListComponent } from './stop-list/stop-list.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, MatProgressSpinnerModule, MatButtonModule, MatCardModule ],
-  declarations: [ AppComponent, HelloComponent, BusStopComponent ],
+  declarations: [ AppComponent, HelloComponent, BusStopComponent, StopListComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
