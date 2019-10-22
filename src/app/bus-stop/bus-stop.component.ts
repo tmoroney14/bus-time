@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Stops } from './stops';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-bus-stop',
   templateUrl: './bus-stop.component.html',
   styleUrls: ['./bus-stop.component.css']
 })
-export class BusStopComponent implements OnInit {
+export class BusStopComponent {
 
-    url = `https://data.smartdublin.ie/cgi-bin/rtpi/timetableinformation?type=week&stopid=5165&routeid=33b&format=json`;
-  items = [];
+  readonly ROOT_URL =  `https://data.smartdublin.ie/cgi-bin/rtpi/timetableinformation?type=week&stopid=5165&routeid=33b&format=json`;
+  posts: Observable<any>;
 
-  constructor(private http: HttpClient) {
-    this.http.get(this.url).toPromise().then(data => {
-      console.log(data);
+  constructor(private http: HttpClient) {}
+  
+  getPosts() {
+    let params = new HttpParams().set('stopId', '3720');
 
-      for (let key in data)
-        if (data.hasOwnProperty(key))
-          this.items.push(data[key]);
-    });
+    this.posts = this.http.get(this.ROOT_URL + '/posts', { params })    
   }
 
   ngOnInit() {
