@@ -1,9 +1,12 @@
 <div class="text-container">
-  <h3> List of stops </h3>
+  <mat-card class="bus-card">
+    <h3> STOPS </h3>
+  <img class="bus" src="https://cdn.dribbble.com/users/1928873/screenshots/6456745/bus_animation.gif">
+  </mat-card>
 </div>
 <div class="grid">
 <div *ngFor="let stop of stops, let i=index; index as stopId;"> 
-<mat-card [routerLink]="['/stops', stopId]" matRipple
+<mat-card class="stop" [routerLink]="['/stops', stopId]" matRipple
      [matRippleCentered]="centered"
      [matRippleDisabled]="disabled"
      [matRippleUnbounded]="unbounded"
