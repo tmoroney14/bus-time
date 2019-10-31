@@ -3,9 +3,16 @@ h3 {
   font-size: 30px;
   text-align: center;
   margin-top: 0px;
-  padding-top: 30px;
-  color: white;
-  margin-bottom: 20px
+  padding-top: 40px;
+  color: whitesmoke;
+  margin-bottom: 0px
+}
+
+.text-container {
+  height: 120px;
+  background: #1FA2FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 mat-card {
@@ -33,13 +40,13 @@ mat-card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1.8rem;
-  max-width: 800px;
   padding: 8%;
-  padding-top: 40px;
+  padding-top: 50px;
   margin:auto;
-  border:8px solid #8aacc8;
-  border-radius: 15px;
-  background-color: #bbdefb;
+  border:0px solid #8aacc8;
+  border-radius: 28px 28px 0px 0px;
+  background-color: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 mat-card-title {

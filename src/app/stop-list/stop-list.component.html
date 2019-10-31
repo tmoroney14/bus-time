@@ -1,4 +1,6 @@
-<h3> List of stops </h3>
+<div class="text-container">
+  <h3> List of stops </h3>
+</div>
 <div class="grid">
 <div *ngFor="let stop of stops, let i=index; index as stopId;"> 
 <mat-card [routerLink]="['/stops', stopId]" matRipple
